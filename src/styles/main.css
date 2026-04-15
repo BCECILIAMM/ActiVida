@@ -1,0 +1,163 @@
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background: var(--surface-ground);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  min-height: 100vh;
+  background: var(--surface-ground);
+  color: var(--text-color);
+  width: 100%;
+}
+
+#app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--surface-ground);
+  color: var(--text-color);
+  width: 100%;
+}
+
+main {
+  flex: 1;
+  background: var(--surface-ground);
+  color: var(--text-color);
+  width: 100%;
+}
+
+.router-link-active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 2px;
+}
+
+/* Global responsive utilities */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+input, textarea, select, button {
+  font-family: inherit;
+}
+
+/* Animaciones básicas para AnimateOnScroll */
+.fadeinup {
+  animation: fadeInUp .6s ease-out both;
+}
+
+.fadein {
+  animation: fadeIn .6s ease-out both;
+}
+
+.fadeout {
+  animation: fadeOut .3s ease-in both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* Global responsive tweaks */
+@media (max-width: 1024px) {
+  :root {
+    --font-size-base: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-base: 14px;
+  }
+
+  html, body {
+    font-size: 14px;
+  }
+
+  /* PrimeUI responsive overrides */
+  :deep(.p-button) {
+    padding: 0.5rem 1rem !important;
+  }
+
+  :deep(.p-inputtext) {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 14px !important;
+  }
+
+  :deep(.p-dropdown) {
+    padding: 0.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  html, body {
+    font-size: 13px;
+  }
+
+  :deep(.p-button) {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 12px !important;
+  }
+
+  :deep(.p-button-sm) {
+    padding: 0.3rem 0.6rem !important;
+    font-size: 11px !important;
+  }
+
+  :deep(.p-inputtext) {
+    padding: 0.4rem 0.6rem !important;
+    font-size: 13px !important;
+  }
+
+  :deep(.p-dropdown) {
+    padding: 0.4rem !important;
+    font-size: 13px !important;
+  }
+
+  :deep(.p-inputtextarea) {
+    padding: 0.4rem 0.6rem !important;
+    font-size: 13px !important;
+  }
+}
+
+/* Convertir todos los títulos a mayúsculas */
+h1, h2, h3, h4, h5, h6, .title {
+  text-transform: uppercase;
+}
