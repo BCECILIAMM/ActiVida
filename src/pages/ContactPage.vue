@@ -187,7 +187,7 @@ const form = ref({
 
 const subjects = [
   'Información sobre planes',
-  'Coaching personalizado',
+  'Asesoría personalizada',
   'Soporte técnico',
   'Eventos',
   'Otro',

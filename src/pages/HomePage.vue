@@ -223,7 +223,7 @@
       >
         <h2 class="title">¿Listo para empezar?</h2>
         <p class="subtitle">
-          Transforma tu pasión por el running en una realidad. Únete a ActiVida
+          Transforma tu pasión por correr en una realidad. Únete a ActiVida
           hoy.
         </p>
 
@@ -286,7 +286,7 @@
             </AccordionContent>
           </AccordionPanel>
           <AccordionPanel value="2">
-            <AccordionHeader>¿Qué incluye el coaching personalizado?</AccordionHeader>
+            <AccordionHeader>¿Qué incluye la asesoría personalizada?</AccordionHeader>
             <AccordionContent>
               <p>
                 Planes de entrenamiento adaptados a tu nivel, análisis de tu

@@ -8,7 +8,7 @@ import CoachPage from '../pages/CoachPage.vue'
 import TeamPage from '../pages/TeamPage.vue'
 
 const routes = [
-  { path: '/', component: HomePage, meta: { title: 'ActiVida — Club de Running en Aguascalientes' } },
+  { path: '/', component: HomePage, meta: { title: 'ActiVida — Club de Corredores en Aguascalientes' } },
   { path: '/planes', component: PlansPage, meta: { title: 'Planes — ActiVida' } },
   { path: '/eventos', component: EventsPage, meta: { title: 'Eventos y Entrenamientos — ActiVida' } },
   { path: '/equipo', component: TeamPage, meta: { title: 'Equipo Multidisciplinario — ActiVida' } },

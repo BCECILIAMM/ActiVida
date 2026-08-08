@@ -96,8 +96,8 @@
             <h3>Mi Misión</h3>
             <p>
               Mejorar la calidad de vida y salud de las personas convirtiendo
-              metas que parecen lejanas en procesos que se disfrutan. Porque el
-              running no es solo sobre kilómetros; es sobre transformación.
+              metas que parecen lejanas en procesos que se disfrutan. Porque
+              correr no es solo sobre kilómetros; es sobre transformación.
             </p>
           </div>
 
@@ -236,8 +236,8 @@
             <i class="pi pi-heart"></i>
             <h3>Calidad de Vida</h3>
             <p>
-              El foco no es solo performance: es convertir el running en un
-              hábito que te ame
+              El foco no es solo el rendimiento: es convertir correr en un
+              hábito que ames
             </p>
           </div>
 

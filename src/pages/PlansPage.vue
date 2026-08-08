@@ -25,11 +25,11 @@
         period="mes"
         :coach="[
           {
-            role: 'Coach Entrenamiento',
+            role: 'Entrenadora',
             name: 'MCAF. Cynthia Verónica Torres Velázquez',
           },
           {
-            role: 'Coach Nutrición',
+            role: 'Nutrióloga',
             name: 'MAFYD. Stephanye Santacruz Vallejo',
           },
         ]"
@@ -70,11 +70,11 @@
         subtitle="Entrenamiento combinado ActiVida + ATP Energy"
         :coach="[
           {
-            role: 'Coach Entrenamiento',
+            role: 'Entrenadora',
             name: 'MCAF. Cynthia Verónica Torres Velázquez',
           },
           {
-            role: 'Coach Entrenamiento ATP Energy',
+            role: 'Entrenadora ATP Energy',
             name: 'CFYD. Guissepe Alejandro Escamilla Marín',
           },
         ]"
@@ -112,7 +112,7 @@
         period="mes"
         :coach="[
           {
-            role: 'Coach Entrenamiento',
+            role: 'Entrenadora',
             name: 'MCAF. Cynthia Verónica Torres Velázquez',
           },
         ]"
@@ -141,11 +141,11 @@
         period="mes"
         :coach="[
           {
-            role: 'Coach Entrenamiento',
+            role: 'Entrenadora',
             name: 'MCAF. Cynthia Verónica Torres Velázquez',
           },
           {
-            role: 'Coach Entrenamiento ATP Energy',
+            role: 'Entrenadora ATP Energy',
             name: 'CFYD. Guissepe Alejandro Escamilla Marín',
           },
         ]"
