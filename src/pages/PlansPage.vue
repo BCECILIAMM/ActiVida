@@ -1,14 +1,24 @@
 <template>
   <div class="plans-page">
     <section class="plans-header">
-      <div class="plans-header__content">
-       <h1>ELIGE TU PLAN</h1>
-<p>Elige el plan ideal para lograr tus objetivos y mejorar tu resistencia.</p>
+      <div
+        class="plans-header__content"
+        v-animateonscroll="{
+          enterClass: 'animate-enter fade-in-10 slide-in-from-b-10 animate-duration-700',
+          once: true,
+        }"
+      >
+        <h1>ELIGE TU PLAN</h1>
+        <p>Elige el plan ideal para lograr tus objetivos y mejorar tu resistencia.</p>
       </div>
     </section>
 
     <section class="plans-grid">
-      <PlanCard
+      <div
+        class="plan-card-wrap"
+        v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-8 animate-duration-700 animate-delay-100', once: true }"
+      >
+        <PlanCard
         title="Plan + Nutrición"
         subtitle="ActiVida & Nuth_bySanta"
         :price="800"
@@ -48,8 +58,14 @@
         button-severity="success"
         is-featured
         @select-plan="selectPlan('Plan + Nutrición - $800')"
-      />
-            <PlanCard
+        />
+      </div>
+
+      <div
+        class="plan-card-wrap"
+        v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-8 animate-duration-700 animate-delay-200', once: true }"
+      >
+        <PlanCard
         title="Plan Run Energy"
         subtitle="Entrenamiento combinado ActiVida + ATP Energy"
         :coach="[
@@ -82,8 +98,14 @@
         button-label="Seleccionar Plan"
         button-severity="secondary"
         @select-plan="selectPlan('Plan Run Energy - consultar sucursal')"
-      />
-      <PlanCard
+        />
+      </div>
+
+      <div
+        class="plan-card-wrap"
+        v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-8 animate-duration-700 animate-delay-300', once: true }"
+      >
+        <PlanCard
         title="Plan ActiVida"
         subtitle="Plan semanal mensual"
         :price="450"
@@ -105,13 +127,16 @@
         button-label="Seleccionar Plan"
         button-severity="secondary"
         @select-plan="selectPlan('Plan ActiVida - $450')"
-      />
+        />
+      </div>
 
-
-
-      <PlanCard
-        title="Preparate HYROX"
-        
+      <div
+        class="plan-card-wrap"
+        v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-8 animate-duration-700 animate-delay-400', once: true }"
+      >
+        <PlanCard
+        title="Entrenamiento Funcional Intenso"
+        subtitle="Plan de acondicionamiento funcional de alta intensidad"
         :price="350"
         period="mes"
         :coach="[
@@ -125,41 +150,47 @@
           },
         ]"
         :features="[
-          'Plan entrenamiento HYROX (de 2 a 3 dias por semana)',
+          'Plan de entrenamiento funcional (de 2 a 3 dias por semana)',
           'Entrenamientos a distancia o presenciales',
           'Seguimiento profesional 24/7',
           'Técnica de carrera personalizada',
           'Recomendaciones nutricionales',
           'Acceso a promociones y descuentos',
         ]"
-      
-        plan-name="Preparate HYROX"
+
+        plan-name="Entrenamiento Funcional Intenso"
         button-label="Seleccionar Plan"
         button-severity="warning"
-        @select-plan="selectPlan('Preparate HYROX - $350')"
-      />
+        @select-plan="selectPlan('Entrenamiento Funcional Intenso - $350')"
+        />
+      </div>
     </section>
 
     <section class="additional-benefits">
       <div class="content">
-        <h2>¿Por qué elegir ActiVida?</h2>
+        <h2
+          v-animateonscroll="{
+            enterClass: 'animate-enter fade-in-10 slide-in-from-b-10 animate-duration-700',
+            once: true,
+          }"
+        >¿Por qué elegir ActiVida?</h2>
         <div class="benefits-grid">
-          <div class="benefit-card">
+          <div class="benefit-card" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-700 animate-delay-100', once: true }">
             <i class="pi pi-mobile"></i>
             <h3>App Personalizada</h3>
             <p>Acceso a entrenamientos adaptados a tu nivel y objetivo</p>
           </div>
-          <div class="benefit-card">
+          <div class="benefit-card" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-700 animate-delay-200', once: true }">
             <i class="pi pi-users"></i>
-            <h3>Coaching Profesional</h3>
+            <h3>Mentoría Profesional</h3>
             <p>Entrenadores certificados disponibles para asesorarte</p>
           </div>
-          <div class="benefit-card">
+          <div class="benefit-card" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-700 animate-delay-300', once: true }">
             <i class="pi pi-map"></i>
             <h3>Clases Presenciales</h3>
             <p>Entrena en grupo con técnica de carrera profesional</p>
           </div>
-          <div class="benefit-card">
+          <div class="benefit-card" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-700 animate-delay-400', once: true }">
             <i class="pi pi-star"></i>
             <h3>Comunidad Activa</h3>
             <p>Únete a otros corredores y comparte tu progreso</p>
@@ -169,7 +200,13 @@
     </section>
 
     <section class="cta-final">
-      <div class="content">
+      <div
+        class="content"
+        v-animateonscroll="{
+          enterClass: 'animate-enter fade-in-10 slide-in-from-b-10 animate-duration-700',
+          once: true,
+        }"
+      >
         <h2>¿Aún dudas? Habla con nuestro equipo</h2>
         <p>Consulta gratis para encontrar el plan perfecto para ti</p>
         <Button
@@ -192,13 +229,13 @@ import PlanCard from "../components/plans/PlanCard.vue";
 const selectPlan = (plan) => {
   const message = `Quiero contratar: ${plan}`;
   window.open(
-    `https://wa.me/524491004396?text=${encodeURIComponent(message)}`,
+    `https://wa.me/5214442611500?text=${encodeURIComponent(message)}`,
     "_blank"
   );
 };
 
 const goToWhatsApp = () => {
-  window.open("https://wa.me/524491004396", "_blank");
+  window.open("https://wa.me/5214442611500", "_blank");
 };
 </script>
 
@@ -233,6 +270,15 @@ const goToWhatsApp = () => {
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto 4rem;
+}
+
+.plan-card-wrap {
+  display: flex;
+  height: 100%;
+}
+
+.plan-card-wrap :deep(.plan-card) {
+  width: 100%;
 }
 
 @media (min-width: 1400px) {

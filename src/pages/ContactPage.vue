@@ -1,7 +1,13 @@
 <template>
   <div class="contact-page">
     <section class="contact-header">
-      <div class="header-content">
+      <div
+        class="header-content"
+        v-animateonscroll="{
+          enterClass: 'animate-enter fade-in-10 slide-in-from-b-10 animate-duration-700',
+          once: true,
+        }"
+      >
         <h1>Contacto</h1>
         <p>¿Preguntas? Estamos aquí para ayudarte. Contacta con nosotros de varias formas.</p>
       </div>
@@ -11,12 +17,19 @@
       <div class="content">
         <div class="contact-grid">
           <!-- Formulario -->
-          <div class="contact-form-container">
+          <div
+            class="contact-form-container"
+            v-animateonscroll="{
+              enterClass: 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-800',
+              once: true,
+            }"
+          >
             <h2>Envía tu mensaje</h2>
             <form @submit.prevent="submitForm">
               <div class="form-group">
-                <label>Nombre</label>
-                <InputText 
+                <label for="contact-name">Nombre</label>
+                <InputText
+                  id="contact-name"
                   v-model="form.name"
                   placeholder="Tu nombre"
                   required
@@ -24,8 +37,9 @@
               </div>
 
               <div class="form-group">
-                <label>Email</label>
-                <InputText 
+                <label for="contact-email">Email</label>
+                <InputText
+                  id="contact-email"
                   v-model="form.email"
                   type="email"
                   placeholder="tu@email.com"
@@ -34,16 +48,18 @@
               </div>
 
               <div class="form-group">
-                <label>Teléfono</label>
-                <InputText 
+                <label for="contact-phone">Teléfono</label>
+                <InputText
+                  id="contact-phone"
                   v-model="form.phone"
                   placeholder="+52 xxx xxx xxxx"
                 />
               </div>
 
               <div class="form-group">
-                <label>Asunto</label>
-                <Dropdown 
+                <label for="contact-subject">Asunto</label>
+                <Dropdown
+                  input-id="contact-subject"
                   v-model="form.subject"
                   :options="subjects"
                   placeholder="Selecciona un asunto"
@@ -52,8 +68,9 @@
               </div>
 
               <div class="form-group">
-                <label>Mensaje</label>
-                <Textarea 
+                <label for="contact-message">Mensaje</label>
+                <Textarea
+                  id="contact-message"
                   v-model="form.message"
                   placeholder="Tu mensaje aquí..."
                   :rows="5"
@@ -70,7 +87,13 @@
           </div>
 
           <!-- Info de contacto -->
-          <div class="contact-info">
+          <div
+            class="contact-info"
+            v-animateonscroll="{
+              enterClass: 'animate-enter fade-in-10 slide-in-from-r-8 animate-duration-800',
+              once: true,
+            }"
+          >
             <div class="info-section">
               <h3>Información de Contacto</h3>
               
@@ -80,7 +103,7 @@
                 </div>
                 <div>
                   <h4>WhatsApp</h4>
-                  <p class="info-text">+52 449 100 4396</p>
+                  <p class="info-text">+52 1 444 261 1500</p>
                   <Button 
                     label="Enviar mensaje"
                     text
@@ -96,7 +119,7 @@
                 </div>
                 <div>
                   <h4>Email</h4>
-                  <p class="info-text">contacto@activida.com</p>
+                  <p class="info-text">actividaags@gmail.com</p>
                 </div>
               </div>
 
@@ -171,13 +194,21 @@ const subjects = [
 ];
 
 const submitForm = () => {
-  const message = `Hola, soy ${form.value.name}. ${form.value.message}`;
-  window.open(`https://wa.me/524491004396?text=${encodeURIComponent(message)}`, '_blank');
+  const lines = [
+    `Hola, soy ${form.value.name}.`,
+    form.value.subject && `Asunto: ${form.value.subject}`,
+    form.value.email && `Email: ${form.value.email}`,
+    form.value.phone && `Teléfono: ${form.value.phone}`,
+    form.value.message,
+  ].filter(Boolean);
+
+  const message = lines.join('\n');
+  window.open(`https://wa.me/5214442611500?text=${encodeURIComponent(message)}`, '_blank');
   form.value = { name: '', email: '', phone: '', subject: '', message: '' };
 };
 
 const goToWhatsApp = () => {
-  window.open('https://wa.me/524491004396', '_blank');
+  window.open('https://wa.me/5214442611500', '_blank');
 };
 </script>
 
@@ -247,6 +278,14 @@ const goToWhatsApp = () => {
 .form-group :deep(.p-dropdown) {
   width: 100%;
   border-radius: 8px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-group :deep(.p-inputtext:focus),
+.form-group :deep(.p-textarea:focus),
+.form-group :deep(.p-select:focus-within),
+.form-group :deep(.p-dropdown:focus-within) {
+  box-shadow: 0 0 0 3px rgba(46, 229, 111, 0.2) !important;
 }
 
 .submit-btn {
@@ -255,6 +294,12 @@ const goToWhatsApp = () => {
   border: none !important;
   color: #000 !important;
   font-weight: 600 !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(46, 229, 111, 0.3) !important;
 }
 
 .info-section {
@@ -263,12 +308,23 @@ const goToWhatsApp = () => {
   border-radius: 12px;
   border: 1px solid var(--surface-border);
   margin-bottom: 2rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-section:hover {
+  border-color: #2ee56f;
+  box-shadow: 0 12px 28px rgba(46, 229, 111, 0.1);
 }
 
 .info-item {
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
+  transition: transform 0.25s ease;
+}
+
+.info-item:hover {
+  transform: translateX(4px);
 }
 
 .info-item:last-child {

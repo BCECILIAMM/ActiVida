@@ -8,7 +8,7 @@
         <h2 class="title">¿Qué es <span class="brand">ActiVida</span>?</h2>
 
         <p class="subtitle">
-          Somos más que un club de running. Somos una comunidad de
+          Más que un club, somos ActiVida: una comunidad de
           transformación.
         </p>
 
@@ -260,39 +260,51 @@
         </h2>
 
         <Accordion
-          :value="0"
+          value="0"
           v-animateonscroll="{
             enterClass: 'animate-enter fade-in-10 animate-duration-700',
             once: true,
           }"
         >
-          <AccordionTab header="¿Cuál es el nivel mínimo para unirme?">
-            <p>
-              ActiVida es para corredores de TODOS los niveles. Tenemos
-              entrenamientos desde principiante hasta avanzado. No importa si
-              apenas empiezas o si ya corres maratones.
-            </p>
-          </AccordionTab>
-          <AccordionTab header="¿Puedo cambiar de plan en cualquier momento?">
-            <p>
-              Sí, puedes cambiar, mejorar o cancelar tu plan cuando lo desees.
-              Queremos que estés cómodo con tu elección.
-            </p>
-          </AccordionTab>
-          <AccordionTab header="¿Qué incluye el coaching personalizado?">
-            <p>
-              Planes de entrenamiento adaptados a tu nivel, análisis de tu
-              técnica de carrera, nutrición deportiva y soporte emocional para
-              alcanzar tus metas.
-            </p>
-          </AccordionTab>
-          <AccordionTab header="¿Cuándo puedo empezar?">
-            <p>
-              ¡Ahora mismo! Contáctanos por WhatsApp y comenzarás tu
-              transformación en 48 horas. Nuestro equipo te apoyará en cada
-              paso.
-            </p>
-          </AccordionTab>
+          <AccordionPanel value="0">
+            <AccordionHeader>¿Cuál es el nivel mínimo para unirme?</AccordionHeader>
+            <AccordionContent>
+              <p>
+                ActiVida es para corredores de TODOS los niveles. Tenemos
+                entrenamientos desde principiante hasta avanzado. No importa si
+                apenas empiezas o si ya corres maratones.
+              </p>
+            </AccordionContent>
+          </AccordionPanel>
+          <AccordionPanel value="1">
+            <AccordionHeader>¿Puedo cambiar de plan en cualquier momento?</AccordionHeader>
+            <AccordionContent>
+              <p>
+                Sí, puedes cambiar, mejorar o cancelar tu plan cuando lo desees.
+                Queremos que estés cómodo con tu elección.
+              </p>
+            </AccordionContent>
+          </AccordionPanel>
+          <AccordionPanel value="2">
+            <AccordionHeader>¿Qué incluye el coaching personalizado?</AccordionHeader>
+            <AccordionContent>
+              <p>
+                Planes de entrenamiento adaptados a tu nivel, análisis de tu
+                técnica de carrera, nutrición deportiva y soporte emocional para
+                alcanzar tus metas.
+              </p>
+            </AccordionContent>
+          </AccordionPanel>
+          <AccordionPanel value="3">
+            <AccordionHeader>¿Cuándo puedo empezar?</AccordionHeader>
+            <AccordionContent>
+              <p>
+                ¡Ahora mismo! Contáctanos por WhatsApp y comenzarás tu
+                transformación en 48 horas. Nuestro equipo te apoyará en cada
+                paso.
+              </p>
+            </AccordionContent>
+          </AccordionPanel>
         </Accordion>
       </div>
     </section>
@@ -304,14 +316,16 @@ import { useRouter } from "vue-router";
 import HeroBanner from "../components/home/HeroBanner.vue";
 import Button from "primevue/button";
 import Accordion from "primevue/accordion";
-import AccordionTab from "primevue/accordiontab";
+import AccordionPanel from "primevue/accordionpanel";
+import AccordionHeader from "primevue/accordionheader";
+import AccordionContent from "primevue/accordioncontent";
 
 const router = useRouter();
 
 const goToPlans = () => router.push("/planes");
 
 const goToWhatsApp = () => {
-  window.open("https://wa.me/524491004396", "_blank");
+  window.open("https://wa.me/5214442611500", "_blank");
 };
 </script>
 
@@ -535,9 +549,20 @@ const goToWhatsApp = () => {
   margin: 0 auto;
 }
 
-:deep(.p-accordion .p-accordion-header-link) {
+:deep(.p-accordion .p-accordionheader) {
   padding: 1.5rem;
   font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+:deep(.p-accordion .p-accordionheader:hover) {
+  color: #2ee56f;
+}
+
+:deep(.p-accordionpanel) {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
 }
 
 /* Responsive */
@@ -596,7 +621,7 @@ const goToWhatsApp = () => {
     font-size: 24px;
   }
 
-  :deep(.p-accordion .p-accordion-header-link) {
+  :deep(.p-accordion .p-accordionheader) {
     padding: 1rem;
     font-size: 14px;
   }

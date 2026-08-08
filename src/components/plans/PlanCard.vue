@@ -469,14 +469,5 @@ const handleClick = () => {
     padding: 0.75rem !important;
     font-size: 13px !important;
   }
-  .plans-header__content h1 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.plans-header__content p {
-  max-width: 600px;
-  margin: 0 auto 2rem;
-}
 }
 </style>

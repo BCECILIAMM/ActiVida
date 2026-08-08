@@ -17,7 +17,8 @@
         <RouterLink class="nav-link" to="/">Inicio</RouterLink>
         <RouterLink class="nav-link" to="/planes">Planes</RouterLink>
         <RouterLink class="nav-link" to="/eventos">Eventos</RouterLink>
-        <RouterLink class="nav-link" to="/coach">Coach</RouterLink>
+        <RouterLink class="nav-link" to="/equipo">Equipo</RouterLink>
+        <RouterLink class="nav-link" to="/coach">Entrenadora</RouterLink>
         <RouterLink class="nav-link" to="/contacto">Contacto</RouterLink>
       </nav>
 
@@ -51,7 +52,8 @@
         <RouterLink class="drawer-link" @click="close" to="/">Inicio</RouterLink>
         <RouterLink class="drawer-link" @click="close" to="/planes">Planes</RouterLink>
         <RouterLink class="drawer-link" @click="close" to="/eventos">Eventos</RouterLink>
-        <RouterLink class="drawer-link" @click="close" to="/coach">Coach</RouterLink>
+        <RouterLink class="drawer-link" @click="close" to="/equipo">Equipo</RouterLink>
+        <RouterLink class="drawer-link" @click="close" to="/coach">Entrenadora</RouterLink>
         <RouterLink class="drawer-link" @click="close" to="/contacto">Contacto</RouterLink>
 
         <Button
@@ -68,7 +70,6 @@
 </template>
 
 <script setup>
-import Badge from "primevue/badge";
 import Button from "primevue/button";
 import { ref } from "vue";
 import logoDark from "../../assets/actividaBlanco.png";
@@ -84,7 +85,7 @@ const visible = ref(false);
 const close = () => (visible.value = false);
 
 const goToWhatsApp = () => {
-  window.open("https://wa.me/524491004396", "_blank");
+  window.open("https://wa.me/5214442611500", "_blank");
 };
 </script>
 <style scoped>
@@ -127,6 +128,11 @@ const goToWhatsApp = () => {
   width: 3.25rem;
   object-fit: contain;
   flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.logo-link:hover .logo {
+  transform: scale(1.06) rotate(-3deg);
 }
 
 
@@ -193,6 +199,11 @@ const goToWhatsApp = () => {
 
 .theme-toggle:hover {
   background: #f3f4f6;
+  transform: rotate(15deg);
+}
+
+.theme-toggle i {
+  transition: transform 0.4s ease;
 }
 
 .app-header.dark-mode .theme-toggle:hover {

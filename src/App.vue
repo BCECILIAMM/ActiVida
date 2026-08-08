@@ -6,12 +6,15 @@
     <main class="min-h-screen">
       <router-view />
     </main>
+
+    <AppFooter :isDark="isDark" />
   </div>
 </template>
 
 <script setup>
 import { ref, watch } from "vue";
 import AppHeader from "./components/layout/AppHeader.vue";
+import AppFooter from "./components/layout/AppFooter.vue";
 
 const isDark = ref(localStorage.getItem("theme") === "dark");
 

@@ -6,18 +6,26 @@
         <div class="hero-image">
           <img
             src="../assets/verito2.webp"
-            alt="Cynthia Verónica Torres Velázquez - Couchita Verito"
-            class="hero-photo"
+            alt="Cynthia Verónica Torres Velázquez - Entrenadora Verito"
+            class="hero-photo fade-img"
+            @load="onHeroImgLoad = true"
+            :style="onHeroImgLoad ? 'opacity:1;filter:blur(0);' : ''"
           />
           <div class="hero-overlay">
-            <div class="hero-badge">Couchita Verito</div>
+            <div class="hero-badge">Entrenadora Verito</div>
           </div>
         </div>
 
-        <div class="hero-info">
+        <div
+          class="hero-info"
+          v-animateonscroll="{
+            enterClass: 'animate-enter fade-in-10 slide-in-from-r-8 animate-duration-800',
+            once: true,
+          }"
+        >
           <div class="hero-name">
             <h1>Cynthia Verónica Torres Velázquez</h1>
-            <p class="hero-nickname">"La Couchita Verito"</p>
+            <p class="hero-nickname">"Entrenadora de ActiVida"</p>
           </div>
 
           <p class="hero-tagline">
@@ -52,7 +60,7 @@
 
           <div class="hero-cta">
             <Button
-              label="Reserva tu sesión con Couchita"
+              label="Reserva tu sesión con Verito"
               icon="pi pi-whatsapp"
               severity="success"
               size="large"
@@ -67,10 +75,21 @@
     <!-- Historia y Filosofía -->
     <section class="philosophy-section">
       <div class="content">
-        <h2>Mi Historia</h2>
+        <h2
+          v-animateonscroll="{
+            enterClass: 'animate-enter fade-in-10 slide-in-from-b-10 animate-duration-700',
+            once: true,
+          }"
+        >Mi Historia</h2>
 
         <div class="philosophy-grid">
-          <div class="philosophy-card">
+          <div
+            class="philosophy-card"
+            v-animateonscroll="{
+              enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-800 animate-delay-100',
+              once: true,
+            }"
+          >
             <div class="philosophy-icon">
               <i class="pi pi-heart"></i>
             </div>
@@ -82,7 +101,13 @@
             </p>
           </div>
 
-          <div class="philosophy-card">
+          <div
+            class="philosophy-card"
+            v-animateonscroll="{
+              enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-800 animate-delay-200',
+              once: true,
+            }"
+          >
             <div class="philosophy-icon">
               <i class="pi pi-lightbulb"></i>
             </div>
@@ -94,7 +119,13 @@
             </p>
           </div>
 
-          <div class="philosophy-card">
+          <div
+            class="philosophy-card"
+            v-animateonscroll="{
+              enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-800 animate-delay-300',
+              once: true,
+            }"
+          >
             <div class="philosophy-icon">
               <i class="pi pi-compass"></i>
             </div>
@@ -118,33 +149,39 @@
         </p>
 
         <div class="experience-grid">
-          <div class="experience-card">
+          <div class="experience-card" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-600 animate-delay-100', once: true }">
             <div class="experience-number">5K</div>
             <p>Entrenamientos de 5 Kilómetros</p>
           </div>
-          <div class="experience-card">
+          <div class="experience-card" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-600 animate-delay-150', once: true }">
             <div class="experience-number">10K</div>
             <p>Entrenamientos de 10 Kilómetros</p>
           </div>
-          <div class="experience-card">
+          <div class="experience-card" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-600 animate-delay-200', once: true }">
             <div class="experience-number">21K</div>
             <p>Media Maratón</p>
           </div>
-          <div class="experience-card">
+          <div class="experience-card" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-600 animate-delay-250', once: true }">
             <div class="experience-number">42K</div>
             <p>Maratón Completa</p>
           </div>
-          <div class="experience-card">
+          <div class="experience-card" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-600 animate-delay-300', once: true }">
             <div class="experience-number">Ultra</div>
             <p>Ultradistancias</p>
           </div>
-          <div class="experience-card highlight">
+          <div class="experience-card highlight" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-600 animate-delay-350', once: true }">
             <div class="experience-number">+7 años</div>
             <p>Transformando vidas</p>
           </div>
         </div>
 
-        <div class="testimony">
+        <div
+          class="testimony"
+          v-animateonscroll="{
+            enterClass: 'animate-enter fade-in-10 slide-in-from-b-10 animate-duration-800',
+            once: true,
+          }"
+        >
           <i class="pi pi-quote"></i>
           <p>
             He visto cómo alguien que empezó con miedo a "no poder" termina
@@ -162,7 +199,7 @@
         <h2>Lo que recibirás conmigo</h2>
 
         <div class="services-grid">
-          <div class="service-card">
+          <div class="service-card" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-700 animate-delay-100', once: true }">
             <i class="pi pi-chart-line"></i>
             <h3>Plan Estructurado</h3>
             <p>
@@ -171,13 +208,13 @@
             </p>
           </div>
 
-          <div class="service-card">
+          <div class="service-card" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-700 animate-delay-150', once: true }">
             <i class="pi pi-shield"></i>
             <h3>Prevención de Lesiones</h3>
             <p>Estrategias basadas en biomecánica y recuperación inteligente</p>
           </div>
 
-          <div class="service-card">
+          <div class="service-card" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-700 animate-delay-200', once: true }">
             <i class="pi pi-lightbulb"></i>
             <h3>Trabajo Mental</h3>
             <p>
@@ -186,7 +223,7 @@
             </p>
           </div>
 
-          <div class="service-card">
+          <div class="service-card" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-700 animate-delay-250', once: true }">
             <i class="pi pi-users"></i>
             <h3>Acompañamiento Real</h3>
             <p>
@@ -195,7 +232,7 @@
             </p>
           </div>
 
-          <div class="service-card">
+          <div class="service-card" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-700 animate-delay-300', once: true }">
             <i class="pi pi-heart"></i>
             <h3>Calidad de Vida</h3>
             <p>
@@ -204,11 +241,11 @@
             </p>
           </div>
 
-          <div class="service-card">
+          <div class="service-card" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 zoom-in-75 animate-duration-700 animate-delay-350', once: true }">
             <i class="pi pi-compass"></i>
             <h3>Versatilidad</h3>
             <p>
-              Running, trail, ciclismo. Crecemos juntos en diferentes terrenos y
+              Carrera, trail, ciclismo. Crecemos juntos en diferentes terrenos y
               desafíos
             </p>
           </div>
@@ -222,17 +259,17 @@
         <h2>¿Qué te prometo?</h2>
 
         <div class="promises-grid">
-          <div class="promise">
+          <div class="promise" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-10 animate-duration-700 animate-delay-100', once: true }">
             <i class="pi pi-check-circle"></i>
             <h3>Estructura</h3>
             <p>Un plan claro, progresivo y científico</p>
           </div>
-          <div class="promise">
+          <div class="promise" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-10 animate-duration-700 animate-delay-200', once: true }">
             <i class="pi pi-heart"></i>
             <h3>Corazón</h3>
             <p>Acompañamiento genuino en cada paso</p>
           </div>
-          <div class="promise">
+          <div class="promise" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-10 animate-duration-700 animate-delay-300', once: true }">
             <i class="pi pi-sync"></i>
             <h3>Constancia</h3>
             <p>Consistencia, hábitos que duran y se disfrutan</p>
@@ -243,7 +280,13 @@
 
     <!-- CTA Final -->
     <section class="final-cta">
-      <div class="content">
+      <div
+        class="content"
+        v-animateonscroll="{
+          enterClass: 'animate-enter fade-in-10 slide-in-from-b-10 animate-duration-800',
+          once: true,
+        }"
+      >
         <h2>Vamos a construir tu mejor versión</h2>
         <p>Con ciencia, corazón y constancia. 🟢💪</p>
         <Button
@@ -260,10 +303,12 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import Button from "primevue/button";
 
+const onHeroImgLoad = ref(false);
 const goToWhatsApp = () => {
-  window.open("https://wa.me/524491004396", "_blank");
+  window.open("https://wa.me/5214442611500", "_blank");
 };
 </script>
 
@@ -272,6 +317,13 @@ const goToWhatsApp = () => {
   background: var(--surface-ground);
   color: var(--text-color);
   padding-top: 0;
+}
+
+/* Fade-in effect for hero image */
+.fade-img {
+  opacity: 0;
+  filter: blur(8px);
+  transition: opacity 0.8s cubic-bezier(.4,0,.2,1), filter 0.8s cubic-bezier(.4,0,.2,1);
 }
 
 /* Hero Section */
@@ -381,6 +433,12 @@ const goToWhatsApp = () => {
   border: none !important;
   color: #000 !important;
   font-weight: 600 !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(46, 229, 111, 0.35) !important;
 }
 
 /* Philosophy Section */
@@ -640,6 +698,12 @@ const goToWhatsApp = () => {
   border: none !important;
   color: #000 !important;
   font-weight: 600 !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.final-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(46, 229, 111, 0.3) !important;
 }
 
 @media (max-width: 1024px) {

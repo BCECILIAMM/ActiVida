@@ -105,8 +105,10 @@ const scrollDown = () => {
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: center center;
-  transform: scale(1.01);
+  /* La imagen de escritorio tiene el texto pegado al lado izquierdo:
+     anclamos el recorte ahí para que el "cover" quite espacio del
+     lado derecho (silueta decorativa) en vez de cortar las letras. */
+  object-position: 8% center;
   will-change: transform;
   animation: heroImageFloat 14s ease-in-out infinite alternate;
 }
@@ -298,16 +300,10 @@ const scrollDown = () => {
 
 @keyframes heroImageFloat {
   from {
-    transform: scale(1.01) translateY(0);
+    transform: scale(1) translateY(0);
   }
   to {
-    transform: scale(1.025) translateY(-4px);
-  }
-}
-
-@media (min-width: 769px) {
-  .hero__image {
-    object-position: center center;
+    transform: scale(1.012) translateY(-4px);
   }
 }
 
