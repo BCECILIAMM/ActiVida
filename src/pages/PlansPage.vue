@@ -230,12 +230,13 @@ const selectPlan = (plan) => {
   const message = `Quiero contratar: ${plan}`;
   window.open(
     `https://wa.me/5214442611500?text=${encodeURIComponent(message)}`,
-    "_blank"
+    "_blank",
+    "noopener"
   );
 };
 
 const goToWhatsApp = () => {
-  window.open("https://wa.me/5214442611500", "_blank");
+  window.open("https://wa.me/5214442611500", "_blank", "noopener");
 };
 </script>
 

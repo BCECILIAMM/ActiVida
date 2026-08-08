@@ -203,12 +203,12 @@ const submitForm = () => {
   ].filter(Boolean);
 
   const message = lines.join('\n');
-  window.open(`https://wa.me/5214442611500?text=${encodeURIComponent(message)}`, '_blank');
+  window.open(`https://wa.me/5214442611500?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
   form.value = { name: '', email: '', phone: '', subject: '', message: '' };
 };
 
 const goToWhatsApp = () => {
-  window.open('https://wa.me/5214442611500', '_blank');
+  window.open('https://wa.me/5214442611500', '_blank', 'noopener');
 };
 </script>
 

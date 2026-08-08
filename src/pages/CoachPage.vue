@@ -308,7 +308,7 @@ import Button from "primevue/button";
 
 const onHeroImgLoad = ref(false);
 const goToWhatsApp = () => {
-  window.open("https://wa.me/5214442611500", "_blank");
+  window.open("https://wa.me/5214442611500", "_blank", "noopener");
 };
 </script>
 

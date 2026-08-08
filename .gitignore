@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.vercel
+.env*
+
+# Respaldos / paquetes viejos - no deben ir al repo
+*.zip
+activida-mejorado/
+portadacop.png

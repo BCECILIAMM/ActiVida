@@ -534,7 +534,8 @@ const viewEvent = (event) => {
 
   window.open(
     `https://wa.me/5214442611500?text=${encodeURIComponent(message)}`,
-    "_blank"
+    "_blank",
+    "noopener"
   );
 };
 </script>

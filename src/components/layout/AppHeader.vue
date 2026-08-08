@@ -85,7 +85,7 @@ const visible = ref(false);
 const close = () => (visible.value = false);
 
 const goToWhatsApp = () => {
-  window.open("https://wa.me/5214442611500", "_blank");
+  window.open("https://wa.me/5214442611500", "_blank", "noopener");
 };
 </script>
 <style scoped>

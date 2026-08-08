@@ -325,7 +325,7 @@ const router = useRouter();
 const goToPlans = () => router.push("/planes");
 
 const goToWhatsApp = () => {
-  window.open("https://wa.me/5214442611500", "_blank");
+  window.open("https://wa.me/5214442611500", "_blank", "noopener");
 };
 </script>
 
