@@ -74,7 +74,7 @@
             name: 'MCAF. Cynthia Verónica Torres Velázquez',
           },
           {
-            role: 'Entrenadora ATP Energy',
+            role: 'Entrenador ATP Energy',
             name: 'CFYD. Guissepe Alejandro Escamilla Marín',
           },
         ]"
@@ -89,7 +89,6 @@
             items: [
               'The Kingdom (Centro): $800',
               'The Jungle (Norte): $900',
-              'Savanna (Blvd. Guadalupano): $900',
               'The Fortress (Sur): $1,030',
             ],
           },
@@ -145,7 +144,7 @@
             name: 'MCAF. Cynthia Verónica Torres Velázquez',
           },
           {
-            role: 'Entrenadora ATP Energy',
+            role: 'Entrenador ATP Energy',
             name: 'CFYD. Guissepe Alejandro Escamilla Marín',
           },
         ]"
